@@ -10,7 +10,8 @@ import { useEffect, useState } from "react";
 import { userRequest } from "../requestMethods";
 import { useNavigate } from "react-router-dom";
 
-// const KEY = process.env.REACT_APP_STRIPE;
+
+const KEY = "pk_test_51MQrT8SHu1wFIS25wTHJLeYZaKJETLn277UvgdaFB0VoTeVBfpNYBp6C5RM1e6B3PnWUHVlM2kaYUR5iRmvhVMT8007RY3wScJ";
 
 const Container = styled.div``;
 
@@ -177,11 +178,12 @@ const Cart = () => {
         });
         navigate("/success", {
           stripeData: res.data,
-          products: cart, });
-      } catch {}
+          });
+      }
+      catch {}
     };
     stripeToken && makeRequest();
-  }, [stripeToken, cart.total, history]);
+  }, [stripeToken, cart.total,navigate]);
   return (
     <Container>
       <Navbar />
@@ -255,7 +257,7 @@ const Cart = () => {
               description={`Your total is $${cart.total}`}
               amount={cart.total * 100}
               token={onToken}
-              // stripeKey={KEY}
+              stripeKey={KEY}
             >
               <Button>CHECKOUT NOW</Button>
             </StripeCheckout>

@@ -21,17 +21,17 @@ const App = () => {
         {/* <Route exact path="/">
           <Home />
         </Route> */}
+        <Route path="/products" element={<ProductList/>}/>
         <Route path="/products/:category" element={<ProductList/>}/>
         <Route path="/product/:id" element={<Product/>}/>
         <Route path="/cart" element={<Cart/>}/>
         <Route path="/success" element={<Success/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/register" element={<Register/>}/>
-        {/* 
+        {/*
         <Route path="/login">{user ? redirect("/") : <Login />}</Route>
-        <Route path="/register">
-          {user ? redirect("/")  : <Register />}
-        </Route> */}
+        <Route path="/register">{user ? redirect("/")  : <Register />}</Route> 
+        */}
         </Routes>
     </Router>
   );
