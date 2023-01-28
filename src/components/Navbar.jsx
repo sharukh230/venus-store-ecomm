@@ -69,7 +69,8 @@ const MenuItem = styled.div`
 `;
 
 const Navbar = () => {
-  const quantity = useSelector(state=>state.quantity)
+  const quantity = useSelector(state=>state.cart.quantity)
+  // console.log(quantity)
   return (
     <Container>
       <Wrapper>
@@ -81,7 +82,10 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
+          {/* <img src={j} alt="" /> */}
+          <Link to="/">
           <Logo>JD's store.</Logo>
+          </Link>
         </Center>
         <Right>
           <Link to="/register">
@@ -91,7 +95,7 @@ const Navbar = () => {
           <MenuItem>SIGN IN</MenuItem>
           </Link>
           <MenuItem>
-            <Badge badgeContent={5} color="primary">
+            <Badge badgeContent={quantity} color="primary">
               <Link to="/cart">
 
               <ShoppingCartOutlined />
