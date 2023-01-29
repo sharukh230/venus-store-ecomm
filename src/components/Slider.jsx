@@ -9,6 +9,7 @@ const Container = styled.div`
   height: 100vh;
   display: flex;
   position: relative;
+  margin-top: 90px;
   overflow: hidden;
   ${mobile({ display: "none" })}
 `;
