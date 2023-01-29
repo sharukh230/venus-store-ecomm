@@ -47,7 +47,9 @@ A Separate page created for Admin here at https://github.com/sharukh230/Jds-stor
 
 ## Let's Dive into What I have made
 ## Home Page :
-![Screenshot 2023-01-24 014856](https://user-images.githubusercontent.com/107460351/214149358-9deeedb8-57a5-41ab-8c7a-7b376f491f50.jpg)
+![Screenshot 2023-01-29 135750](https://user-images.githubusercontent.com/107460351/215314643-2cc5797e-1481-4919-bef7-98a6ec7b272d.png)
+
+
 
 Filtered Section
 ![Screenshot 2023-01-24 014730](https://user-images.githubusercontent.com/107460351/214149873-b3fe2ec9-a90a-44e4-be9f-fb1b17826de9.jpg)
