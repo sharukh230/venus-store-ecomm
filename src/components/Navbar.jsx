@@ -1,15 +1,21 @@
 import React from 'react'
 import styled from "styled-components"
-import {Search,ShoppingCartOutlined} from "@mui/icons-material"
-import {Badge} from "@mui/material"
-import {mobile} from "../responsive"
+import { Search, ShoppingCartOutlined } from "@mui/icons-material"
+import { Badge } from "@mui/material"
+import { mobile } from "../responsive"
 import { Link } from 'react-router-dom'
-import {useSelector} from "react-redux"
+import { useSelector } from "react-redux"
 import g from "../assets/logo.png"
 
 const Container = styled.div`
   height: 90px;
   background-color: beige;
+  display: block;
+  position: fixed;
+  top: 10; 
+   z-index: 9999; 
+   width: 100%; 
+   /* height: 50px; */
   ${mobile({ height: "50px" })}
 `;
 
@@ -77,13 +83,13 @@ const MenuItem = styled.div`
   cursor: pointer;
   ${mobile({ fontSize: "12px", marginLeft: "10px" })}
 `;
-const Logomain =styled.img`
+const Logomain = styled.img`
   width: 10vw;
   border-radius: 60%;
   ${mobile({ width: "90px" })}
 `
 const Navbar = () => {
-  const quantity = useSelector(state=>state.cart.quantity)
+  const quantity = useSelector(state => state.cart.quantity)
   // console.log(quantity)
   return (
     <Container>
@@ -97,22 +103,22 @@ const Navbar = () => {
         </Left>
         <Center>
           <Link to="/">
-          <Logomain className='logo' src={g} alt="" />
-          {/* <Logo>JD's store.</Logo> */}
+            <Logomain className='logo' src={g} alt="" />
+            {/* <Logo>JD's store.</Logo> */}
           </Link>
         </Center>
         <Right>
           <Link to="/register">
-          <MenuItem>REGISTER</MenuItem>
+            <MenuItem>REGISTER</MenuItem>
           </Link>
           <Link to="/login">
-          <MenuItem>SIGN IN</MenuItem>
+            <MenuItem>SIGN IN</MenuItem>
           </Link>
           <MenuItem>
             <Badge badgeContent={quantity} color="primary">
               <Link to="/cart">
 
-              <ShoppingCartOutlined />
+                <ShoppingCartOutlined />
               </Link>
             </Badge>
           </MenuItem>
