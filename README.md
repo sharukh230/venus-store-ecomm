@@ -1,7 +1,7 @@
 
-# Welcome to JD's Store
+# Welcome to Venus Store
 <h3>
-  JD's Store is a leading online ecommerce fashion brand listing products from clothing to accessories 
+  Venus is a leading online ecommerce fashion brand listing products from clothing to accessories 
 </h3>
 
 ## [Deployed URL]( https://jdstore-ecomm.netlify.app/)
