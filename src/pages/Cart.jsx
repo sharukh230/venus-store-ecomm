@@ -250,7 +250,11 @@ const Cart = () => {
               <SummaryItemPrice>$ {cart.total}</SummaryItemPrice>
             </SummaryItem>
             <StripeCheckout
+<<<<<<< HEAD
               name="Venus Store"
+=======
+              name="JD's Store"
+>>>>>>> 5975dd64c61a28790e20d607bab25d1728cc151b
               image="https://avatars.githubusercontent.com/u/1486366?v=4"
               billingAddress
               shippingAddress
