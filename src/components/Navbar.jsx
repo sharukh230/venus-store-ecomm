@@ -5,9 +5,11 @@ import {Badge} from "@mui/material"
 import {mobile} from "../responsive"
 import { Link } from 'react-router-dom'
 import {useSelector} from "react-redux"
+import g from "../assets/logo.png"
 
 const Container = styled.div`
-  height: 60px;
+  height: 90px;
+  background-color: beige;
   ${mobile({ height: "50px" })}
 `;
 
@@ -26,21 +28,26 @@ const Left = styled.div`
 `;
 
 const Language = styled.span`
-  font-size: 14px;
+  font-size: 18px;
   cursor: pointer;
   ${mobile({ display: "none" })}
 `;
 
 const SearchContainer = styled.div`
-  border: 0.5px solid lightgray;
+  border: 1px solid lightgray;
   display: flex;
   align-items: center;
   margin-left: 25px;
-  padding: 5px;
+  padding: 10px;
+  border-radius: 50px;
 `;
 
 const Input = styled.input`
   border: none;
+  width: 250px;
+  height: 20px;
+  font-size: 20px;
+  background-color: beige;
   ${mobile({ width: "50px" })}
 `;
 
@@ -49,25 +56,32 @@ const Center = styled.div`
   text-align: center;
 `;
 
-const Logo = styled.h1`
-  font-weight: bold;
-  ${mobile({ fontSize: "24px" })}
-`;
+// const Logo = styled.h1`
+//   font-weight: bold;
+//   ${mobile({ fontSize: "24px" })}
+// `;
 const Right = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  
   ${mobile({ flex: 2, justifyContent: "center" })}
 `;
 
 const MenuItem = styled.div`
-  font-size: 14px;
-  cursor: pointer;
+  font-size: 17px;
   margin-left: 25px;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
   ${mobile({ fontSize: "12px", marginLeft: "10px" })}
 `;
-
+const Logomain =styled.img`
+  width: 10vw;
+  border-radius: 60%;
+  ${mobile({ width: "90px" })}
+`
 const Navbar = () => {
   const quantity = useSelector(state=>state.cart.quantity)
   // console.log(quantity)
@@ -82,9 +96,9 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          {/* <img src={j} alt="" /> */}
           <Link to="/">
-          <Logo>JD's store.</Logo>
+          <Logomain className='logo' src={g} alt="" />
+          {/* <Logo>JD's store.</Logo> */}
           </Link>
         </Center>
         <Right>
