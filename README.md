@@ -4,7 +4,7 @@
   Venus is a leading online ecommerce fashion brand listing products from clothing to accessories 
 </h3>
 
-## [Deployed URL]( https://jdstore-ecomm.netlify.app/)
+## [Deployed URL]( https://venus-ecomm.netlify.app/)
 
 Backend url of the Git Repo https://github.com/sharukh230/JDs-Store done using the Node and ExpressJS, used MongoDB for database.
 
